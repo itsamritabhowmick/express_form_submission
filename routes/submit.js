@@ -11,6 +11,7 @@ route.get("/", (req, res) => {
   //   res.send("Form Submitted Amrita");
   //   res.redirect("/");
   res.sendFile(path.join(__dirname, "../views/submit.html"));
+  //   console.log(__dirname);
 });
 
 module.exports = route;
