@@ -23,7 +23,7 @@ route.get("/", (req, res) => {
 
 route.post("/", (req, res) => {
   //   console.log(req);
-  const { name, email, password, tel } = req.body;
+  const { name, email, password, tel } = req.body; // object destructing
   const val = [name, email, password, tel];
 
   const sql = `INSERT INTO registration (cname, cemail, cpassword, cmob) VALUES (?,?,?,?);`; // '?' prevents SQL injection
