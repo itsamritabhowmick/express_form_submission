@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Submission using Express.js</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1 id="main-heading">Registration Form</h1>
+    <form action="/" method="post">
+      <div id="form-container">
+        <div id="form-name-field-div" class="field-styles">
+          <label for="name">Enter Name:</label>
+          <input type="text" name="name" id="name" required />
+        </div>
+
+        <div id="form-email-field-div" class="field-styles">
+          <label for="email">Enter Email:</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+
+        <div id="form-password-field-div" class="field-styles">
+          <label for="password">Enter Password:</label>
+          <input type="password" name="password" id="password" required />
+        </div>
+
+        <div id="form-tel-field-div" class="field-styles">
+          <label for="tel">Enter Mobile Number:</label>
+          <input type="tel" name="tel" id="tel" required />
+        </div>
+
+        <div id="form-submit-btn-div">
+          <button type="submit" id="sub-btn">Submit</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
