@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const route = express.Router();
 
 route.use((req, res, next) => {
@@ -8,7 +9,8 @@ route.use((req, res, next) => {
 
 route.get("/", (req, res) => {
   //   res.send("Form Submitted Amrita");
-  res.redirect("/");
+  //   res.redirect("/");
+  res.sendFile(path.join(__dirname, "../views/submit.html"));
 });
 
 module.exports = route;
