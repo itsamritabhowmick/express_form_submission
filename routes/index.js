@@ -11,6 +11,7 @@ route.get("/", (req, res) => {
 });
 
 route.post("/", (req, res) => {
+  //   console.log(req);
   console.log(req.body);
   res.redirect("/");
 });
