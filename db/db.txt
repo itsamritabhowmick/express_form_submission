@@ -1,0 +1,7 @@
+CREATE TABLE registration(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    cname VARCHAR(50) NOT NULL,
+    cemail VARCHAR(50) UNIQUE NOT NULL,
+    cpassword VARCHAR(50) NOT NULL,
+    cmob BIGINT UNIQUE NOT NULL
+    );
