@@ -8,6 +8,7 @@ const pool = mysql2.createPool({
   port: 3306,
   user: "root",
   password: "",
+  database: "express_form_1_prac",
   connectionLimit: 10,
 });
 
@@ -22,7 +23,19 @@ route.get("/", (req, res) => {
 
 route.post("/", (req, res) => {
   //   console.log(req);
-  console.log(req.body);
+  const { name, email, password, tel } = req.body;
+  const val = [name, email, password, tel];
+
+  const sql = `INSERT INTO registration (cname, cemail, cpassword, cmob) VALUES (?,?,?,?);`; // '?' prevents SQL injection
+  pool.query(sql, val, (err, rows, fields) => {
+    if (err) {
+      console.log("Insertion failed");
+      console.log(err.message);
+      return;
+    }
+    console.log("Inserted successfully");
+  });
+  //   console.log(req.body);
   res.redirect("/");
 });
 
